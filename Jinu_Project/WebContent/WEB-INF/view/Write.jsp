@@ -93,17 +93,16 @@ tr:last-child{
 						<tr>
 							<th>첨부파일</th>
 							<td  class="left" colspan="3"><input type="file" name="file" id="fileid"
-								accept="image/.jpg, image/.png" /> <input type="hidden"
+								accept="image/*" onchange="setThumbnail(event);"/> <input type="hidden"
 								name="file_flag" id="flag" value="1"></td>
 
 						</tr>
 						<tr>
 							<th>첨부파일</th>
 							<td  class="left" colspan="3"><input type="file" name="file" id="fileid"
-								accept="image/.jpg, image/.png" /></td>
+								accept="image/*" onchange="setThumbnail(event);"/></td>
 						</tr>
-
-
+						
 						<tr>
 							<td colspan="4"><textarea id="txtArea" style="resize: none;" class="content" name="content" onkeypress="onTestChange();"></textarea>							
 							<script>
@@ -135,6 +134,18 @@ tr:last-child{
 								}else{
 									document.getElementById("con").submit();
 								}
+							}
+							
+							function setThumbnail(event) { 
+								var reader = new FileReader();
+							 
+								reader.onload = function(event) { 
+									var img = document.createElement("img"); 
+									img.setAttribute("src", event.target.result);
+									document.querySelector("div#image_container").appendChild(img); 
+								}; 
+								
+								reader.readAsDataURL(event.target.files[0]); 
 							}
 						</script>
 			</form>
