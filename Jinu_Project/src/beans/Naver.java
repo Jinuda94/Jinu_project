@@ -1,6 +1,7 @@
 package beans;
 
 public class Naver {
+	int id;
 	String title;
 	String href;
 	String img;
@@ -9,10 +10,19 @@ public class Naver {
 
 	}
 	
-	public Naver(String title, String href, String img) {
+	public Naver(int id, String title, String href, String img) {
+		this.id = id;
 		this.title = title;
 		this.href = href;
 		this.img = img;
+	}
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 	public String getTitle() {
 		return title;

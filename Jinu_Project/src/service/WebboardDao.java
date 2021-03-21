@@ -5,16 +5,18 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import beans.Naver;
+import beans.Webboard;
 
-public class NaverDao {
+public class WebboardDao {
 	private Connection con;
 	private PreparedStatement pstmt;
 	private ResultSet rs;
 	
-	public NaverDao() {
+	public WebboardDao() {
 		try {
 			String url = "jdbc:mysql://3.34.233.108:3306/jinuproject";
 			String root = "jinu";
@@ -31,28 +33,31 @@ public class NaverDao {
 		
 	}
 	
-	public List<Naver> naver_list() {
-		String sql = "SELECT * FROM naver";
-		List<Naver> n_list = new ArrayList<Naver>();
+	public List<Webboard> web_list(int mid, String flag) {
+		String sql = "SELECT * FROM webboard where mid=? and flag=?";
+		List<Webboard> w_list = new ArrayList<Webboard>();
 		try {
 			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, mid);
+			pstmt.setString(2, flag);
 			rs = pstmt.executeQuery();
 			
 			while(rs.next()) {
 				int id = rs.getInt("id");
-				String title = rs.getString("title");
-				String href = rs.getString("href");
-				String img = rs.getString("img");
+				int mid_ = rs.getInt("mid");
+				String flag_ = rs.getString("flag");
+				String UserID = rs.getString("UserID");
+				String comment = rs.getString("comment");
+				Date regdate = rs.getDate("regdate");
 				
-				Naver na = new Naver(id,title,href,img);
-				n_list.add(na);
+				Webboard wb = new Webboard(id,mid_,flag_,UserID,comment,regdate);
+				w_list.add(wb);
 			}
 			
 
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
-		return n_list;
+		return w_list;
 	}
-
 }

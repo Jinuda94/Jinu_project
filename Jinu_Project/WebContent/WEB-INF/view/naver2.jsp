@@ -10,12 +10,12 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="css/common.css">
 <link rel="stylesheet" href="css/style.css">
-<title>daum</title>
+<title>naver2</title>
 <style>
 .col{
 float:left;
-width:160px;
-border-top: 1px solid #f4f4f4;
+width:150px;
+border: 1px solid #f4f4f4;
 text-align:center;
 }
 .col ul li{
@@ -58,7 +58,7 @@ section a span{
 					<ul class="nav_li">
 						<li><a href="main">Main</a></li>
 						<li><a href="board">BOARD</a></li>
-						<li><a href="naver">NAVER WEBTOON</a></li>
+					    <li><a href="naver">NAVER WEBTOON</a></li>
                         <li><a href="daum">DAUM WEBTOON</a></li>
 					</ul>
 				</div>
@@ -73,7 +73,7 @@ section a span{
 							<c:forEach var="n" items="${m_list}" varStatus="t">
 								<li>
 									<div class="thumb">
-										<a href="http://webtoon.daum.net/webtoon/view/${n.nickname}" target="_blank"><img src="${n.imgurl}" alt="${n.title}"> <span class="mask">${n.title}</span>
+										<a href="webboard?id=${n.id}&href=${n.href}&flag=${N}" ><img src="${root}/naver/${n.img}" alt="${n.title}"> <span class="mask">${n.title}</span>
 										</a>
 									</div>
 								</li>
@@ -88,7 +88,7 @@ section a span{
 							<c:forEach var="n" items="${tu_list}" varStatus="t">
 								<li>
 									<div class="thumb">
-										<a href="http://webtoon.daum.net/webtoon/view/${n.nickname}" target="_blank"><img src="${n.imgurl}" alt="${n.title}"> <span class="mask">${n.title}</span>
+										<a href="https://comic.naver.com${n.href}" target="_blank"><img src="${root}/naver/${n.img}" alt="${n.title}"> <span class="mask">${n.title}</span>
 										</a>
 									</div>
 								</li>
@@ -103,7 +103,7 @@ section a span{
 							<c:forEach var="n" items="${w_list}" varStatus="t">
 								<li>
 									<div class="thumb">
-										<a href="http://webtoon.daum.net/webtoon/view/${n.nickname}" target="_blank"><img src="${n.imgurl}" alt="${n.title}"> <span class="mask">${n.title}</span>
+										<a href="https://comic.naver.com${n.href}" target="_blank"><img src="${root}/naver/${n.img}" alt="${n.title}"> <span class="mask">${n.title}</span>
 										</a>
 									</div>
 								</li>
@@ -118,7 +118,7 @@ section a span{
 							<c:forEach var="n" items="${th_list}" varStatus="t">
 								<li>
 									<div class="thumb">
-										<a href="http://webtoon.daum.net/webtoon/view/${n.nickname}" target="_blank"><img src="${n.imgurl}" alt="${n.title}"> <span class="mask">${n.title}</span>
+										<a href="https://comic.naver.com${n.href}" target="_blank"><img src="${root}/naver/${n.img}" alt="${n.title}"> <span class="mask">${n.title}</span>
 										</a>
 									</div>
 								</li>
@@ -133,7 +133,7 @@ section a span{
 							<c:forEach var="n" items="${f_list}" varStatus="t">
 								<li>
 									<div class="thumb">
-										<a href="http://webtoon.daum.net/webtoon/view/${n.nickname}" target="_blank"><img src="${n.imgurl}" alt="${n.title}"> <span class="mask">${n.title}</span>
+										<a href="https://comic.naver.com${n.href}" target="_blank"><img src="${root}/naver/${n.img}" alt="${n.title}"> <span class="mask">${n.title}</span>
 										</a>
 									</div>
 								</li>
@@ -148,7 +148,7 @@ section a span{
 							<c:forEach var="n" items="${sa_list}" varStatus="t">
 								<li>
 									<div class="thumb">
-										<a href="http://webtoon.daum.net/webtoon/view/${n.nickname}" target="_blank"><img src="${n.imgurl}" alt="${n.title}"> <span class="mask">${n.title}</span>
+										<a href="https://comic.naver.com${n.href}" target="_blank"><img src="${root}/naver/${n.img}" alt="${n.title}"> <span class="mask">${n.title}</span>
 										</a>
 									</div>
 								</li>
@@ -163,7 +163,7 @@ section a span{
 							<c:forEach var="n" items="${su_list}" varStatus="t">
 								<li>
 									<div class="thumb">
-										<a href="http://webtoon.daum.net/webtoon/view/${n.nickname}" target="_blank"><img src="${n.imgurl}" alt="${n.title}"> <span class="mask">${n.title}</span>
+										<a href="https://comic.naver.com${n.href}" target="_blank"><img src="${root}/naver/${n.img}" alt="${n.title}"> <span class="mask">${n.title}</span>
 										</a>
 									</div>
 								</li>

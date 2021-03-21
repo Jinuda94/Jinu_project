@@ -73,7 +73,8 @@ section a span{
 							<c:forEach var="n" items="${m_list}" varStatus="t">
 								<li>
 									<div class="thumb">
-										<a href="https://comic.naver.com${n.href}"><img src="${root}/naver/${n.img}" alt="${n.title}"> <span class="mask">${n.title}</span>
+				
+										<a href="webboard?&href=${n.href}&flag=N"><img src="${root}/naver/${n.img}" alt="${n.title}"> <span class="mask">${n.title}</span>
 										</a>
 									</div>
 								</li>
@@ -88,7 +89,7 @@ section a span{
 							<c:forEach var="n" items="${tu_list}" varStatus="t">
 								<li>
 									<div class="thumb">
-										<a href="https://comic.naver.com${n.href}"><img src="${root}/naver/${n.img}" alt="${n.title}"> <span class="mask">${n.title}</span>
+										<a href="https://comic.naver.com${n.href}" target="_blank"><img src="${root}/naver/${n.img}" alt="${n.title}"> <span class="mask">${n.title}</span>
 										</a>
 									</div>
 								</li>
@@ -103,7 +104,7 @@ section a span{
 							<c:forEach var="n" items="${w_list}" varStatus="t">
 								<li>
 									<div class="thumb">
-										<a href="https://comic.naver.com${n.href}"><img src="${root}/naver/${n.img}" alt="${n.title}"> <span class="mask">${n.title}</span>
+										<a href="https://comic.naver.com${n.href}" target="_blank"><img src="${root}/naver/${n.img}" alt="${n.title}"> <span class="mask">${n.title}</span>
 										</a>
 									</div>
 								</li>
@@ -118,7 +119,7 @@ section a span{
 							<c:forEach var="n" items="${th_list}" varStatus="t">
 								<li>
 									<div class="thumb">
-										<a href="https://comic.naver.com${n.href}"><img src="${root}/naver/${n.img}" alt="${n.title}"> <span class="mask">${n.title}</span>
+										<a href="https://comic.naver.com${n.href}" target="_blank"><img src="${root}/naver/${n.img}" alt="${n.title}"> <span class="mask">${n.title}</span>
 										</a>
 									</div>
 								</li>
@@ -133,7 +134,7 @@ section a span{
 							<c:forEach var="n" items="${f_list}" varStatus="t">
 								<li>
 									<div class="thumb">
-										<a href="https://comic.naver.com${n.href}"><img src="${root}/naver/${n.img}" alt="${n.title}"> <span class="mask">${n.title}</span>
+										<a href="https://comic.naver.com${n.href}" target="_blank"><img src="${root}/naver/${n.img}" alt="${n.title}"> <span class="mask">${n.title}</span>
 										</a>
 									</div>
 								</li>
@@ -148,7 +149,7 @@ section a span{
 							<c:forEach var="n" items="${sa_list}" varStatus="t">
 								<li>
 									<div class="thumb">
-										<a href="https://comic.naver.com${n.href}"><img src="${root}/naver/${n.img}" alt="${n.title}"> <span class="mask">${n.title}</span>
+										<a href="https://comic.naver.com${n.href}" target="_blank"><img src="${root}/naver/${n.img}" alt="${n.title}"> <span class="mask">${n.title}</span>
 										</a>
 									</div>
 								</li>
@@ -163,7 +164,7 @@ section a span{
 							<c:forEach var="n" items="${su_list}" varStatus="t">
 								<li>
 									<div class="thumb">
-										<a href="https://comic.naver.com${n.href}"><img src="${root}/naver/${n.img}" alt="${n.title}"> <span class="mask">${n.title}</span>
+										<a href="https://comic.naver.com${n.href}" target="_blank"><img src="${root}/naver/${n.img}" alt="${n.title}"> <span class="mask">${n.title}</span>
 										</a>
 									</div>
 								</li>

@@ -41,11 +41,12 @@ public class DaumDao {
 			rs = pstmt.executeQuery();
 			
 			while(rs.next()) {
+				int id = rs.getInt("id");
 				String title = rs.getString("title");
 				String nickname = rs.getString("nickname");
 				String imgurl = rs.getString("imgurl");
 				
-				Daum da = new Daum(title,nickname,imgurl);
+				Daum da = new Daum(id,title,nickname,imgurl);
 				d_list.add(da);
 			}
 			

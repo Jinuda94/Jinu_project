@@ -1,6 +1,7 @@
 package beans;
 
 public class Daum {
+	int id;
 	String title;
 	String nickname;
 	String imgurl;
@@ -9,10 +10,19 @@ public class Daum {
 		
 	}
 	
-	public Daum(String title, String nickname, String imgurl) {
+	public Daum(int id, String title, String nickname, String imgurl) {
+		this.id = id;
 		this.title = title;
 		this.nickname = nickname;
 		this.imgurl = imgurl;
+	}
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getTitle() {

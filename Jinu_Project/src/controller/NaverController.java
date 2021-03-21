@@ -29,7 +29,9 @@ public class NaverController extends HttpServlet {
 		List<Naver> su_list = new ArrayList<Naver>();//일
 		for(Naver n : n_list) {
 			String img = n.getImg();
-			Naver na = new Naver(n.getTitle(),n.getHref(),n.getImg());
+			System.out.println("zzzzzzzzz");
+			System.out.println("zzzz"+n.getId());
+			Naver na = new Naver(n.getId(),n.getTitle(),n.getHref(),n.getImg());
 			if(img.contains("mon")) {
 				m_list.add(na);
 			}else if(img.contains("tue")) {
@@ -54,7 +56,7 @@ public class NaverController extends HttpServlet {
 		req.setAttribute("sa_list", sa_list);
 		req.setAttribute("su_list", su_list);
 
-		req.getRequestDispatcher("/WEB-INF/view/naver.jsp").forward(req, resp);
+		req.getRequestDispatcher("/WEB-INF/view/naver2.jsp").forward(req, resp);
 	}
 	
 }

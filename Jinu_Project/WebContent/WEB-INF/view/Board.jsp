@@ -59,6 +59,10 @@ tr {
 .search {
 	text-align: center;
 }
+
+.b_con:hover{
+	background-color:#eee;
+}
 </style>
 <title>Insert title here</title>
 </head>
@@ -107,7 +111,7 @@ tr {
 					<th class="n5">조회수</th>
 				</tr>
 				<c:forEach var="n" items="${list}" varStatus="t">
-					<tr>
+					<tr class="b_con">
 						<th class="n1">${n.id}</th>
 						<td class="n2"><a
 							href="detail?id=${n.id}&f=${param.f}&q=${param.q}&p=${param.p}">${n.title}</a></td>
